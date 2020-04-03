@@ -36,4 +36,5 @@ if __name__ == '__main__':
         text = f.read()
         output = fiddle_serial_number(text)
         assert(len(output) == len(text))
-        f.write(fiddle_serial_number(text))
+    with open(application_dot_xml, "w") as f:
+        f.write(output)
